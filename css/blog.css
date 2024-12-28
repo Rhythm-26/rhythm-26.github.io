@@ -116,6 +116,12 @@ footer {
     min-height: 200px; /* Minimum height for the card */
 }
 
+.blog-card a {
+    text-decoration: none; /* Removes underline */
+    color: inherit; /* Inherits color from parent element */
+    display: block; /* Ensures the anchor wraps the entire card content */
+}
+
 /* Hover effect for blog cards */
 .blog-card:hover {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */

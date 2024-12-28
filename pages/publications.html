@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./assets/icons/RhythmLogo.svg" type="image/svg+xml">
+    <link rel="icon" href="../assets/icons/RhythmLogo.svg" type="image/svg+xml">
     <title>Rhythm Narula - Publications</title>
     <link rel="stylesheet" href="../css/publication.css"> 
     <style>
@@ -31,7 +31,7 @@
             <li><a href="#">Resume</a></li>
         </ul>
         
-        <div class="burger">
+        <div class="burger" onclick="toggleMenu()">
             <div class="line"></div>
             <div class="line"></div>
             <div class="line"></div>
@@ -45,19 +45,33 @@
         <div class="content-container">
             <!-- Publication Cards -->
             <div class="card">
-                <h3>Title of Publication 1</h3>
-                <p>Authors: Author1, Author2</p>
-                <p>DOI: 10.1234/abcd</p>
+                <a href="https://ieeexplore.ieee.org/abstract/document/10308340">
+                    <div>
+                        <h3>Structural Analysis using MPU6050 gyroscope</h3>
+                        <p>Authors: Rhythm Narula, Pulkit Barwal, Gaurav Singal</p>
+                        <p>DOI: 10.1109/ICCCNT56998.2023.10308340</p>
+                    </div>
+                </a>
             </div>
+            
             <div class="card">
-                <h3>Title of Publication 2</h3>
-                <p>Authors: Author3, Author4</p>
-                <p>DOI: 10.5678/efgh</p>
+                <a href="https://aclanthology.org/2021.ranlp-srw.1.pdf">
+                    <div>
+                        <h3>Humor Generation and Detection in Code-Mixed Hindi-English.</h3>
+                        <p>Authors: Kaustubh Agrawal, Rhythm Narula</p>
+                        <p>DOI: 10.26615/issn.2603-2821.2021_001</p>
+                    </div>
+                </a>
             </div>
+
             <div class="card">
-                <h3>Title of Publication 2</h3>
-                <p>Authors: Author3, Author4</p>
-                <p>DOI: 10.5678/efgh</p>
+                <a href="https://www.taylorfrancis.com/chapters/edit/10.1201/9781003097198-2/empirical-study-green-cloud-environment-edge-fog-computing-deepak-kumar-sharma-rhythm-narula-prahalad-singh">
+                    <div>
+                        <h3>Empirical Study of Green Cloud Environment, Edge/Fog Computing</h3>
+                        <p>Authors: Deepak Sharma, Rhythm Narula, Prahalad Singh</p>
+                        <p>DOI: 10.1201/9781003097198-2</p>
+                    </div>
+                </a>
             </div>
             <!-- Add more publication cards as needed -->
         </div>
@@ -73,6 +87,12 @@
                 $(".nav-links").toggleClass("active");
             });
         });
+
+        // Toggle the 'active' class on the navigation links
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
     </script>
 </body>
 </html>

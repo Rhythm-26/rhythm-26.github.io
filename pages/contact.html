@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./assets/icons/RhythmLogo.svg" type="image/svg+xml">
+    <link rel="icon" href="../assets/icons/RhythmLogo.svg" type="image/svg+xml">
     <title>Rhythm Narula - Contact</title>
     <link rel="stylesheet" href="../css/contact.css"> 
     <style>
@@ -31,7 +31,7 @@
             <li><a href="#">Resume</a></li>
         </ul>
         
-        <div class="burger">
+        <div class="burger" onclick="toggleMenu()">
             <div class="line"></div>
             <div class="line"></div>
             <div class="line"></div>
@@ -106,6 +106,12 @@
                 $(".nav-links").toggleClass("active");
             });
         });
+
+        // Toggle the 'active' class on the navigation links
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
     </script>
 </body>
 </html>

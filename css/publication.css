@@ -147,6 +147,12 @@ footer {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.card a {
+    text-decoration: none; /* Removes underline */
+    color: inherit; /* Inherits color from parent element */
+    display: block; /* Ensures the anchor wraps the entire card content */
+}
+
 .card h3 {
     font-size: 20px;
     font-weight: bold;

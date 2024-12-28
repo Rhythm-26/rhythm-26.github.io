@@ -31,7 +31,7 @@
         <li><a href="#">Resume</a></li>
     </ul>
     
-    <div class="burger">
+    <div class="burger" onclick="toggleMenu()">
         <div class="line"></div>
         <div class="line"></div>
         <div class="line"></div>
@@ -75,6 +75,11 @@
                 $(".nav-links").toggleClass("active");
             });
         });
+        // Toggle the 'active' class on the navigation links
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
     </script>
 </body>
 </html>

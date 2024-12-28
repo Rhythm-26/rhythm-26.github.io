@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./assets/icons/RhythmLogo.svg" type="image/svg+xml">
+    <link rel="icon" href="../assets/icons/RhythmLogo.svg" type="image/svg+xml">
     <title>Rhythm Narula - Blogs</title>
     <link rel="stylesheet" href="../css/blog.css"> 
     <style>
@@ -31,7 +31,7 @@
             <li><a href="#">Resume</a></li>
         </ul>
         
-        <div class="burger">
+        <div class="burger" onclick="toggleMenu()">
             <div class="line"></div>
             <div class="line"></div>
             <div class="line"></div>
@@ -43,14 +43,18 @@
       <section class="blog-section">
         <h2>Blogs</h2>
         <div class="blog-cards-container">
-            <div class="blog-card" onclick="window.location.href='blog1.html'">
-                <div class="blog-card-title">Blog Title 1</div>
-                <div class="blog-card-content">
-                    <p>Some brief content here about the blog...</p>
-                </div>
-                <div class="blog-card-date">Dec 28, 2024</div>
+            <div class="blog-card" onclick="window.location.href='./Blogs/blog1.html'">
+                <a href="">
+                    <div>
+                        <div class="blog-card-title">GSoC Pitivi Project: Crafting Closing Credits Clip Generator</div>
+                        <div class="blog-card-content">
+                            <p>Welcome to this blog post where I have shared the accomplishments of my GSoC project aimed at implementing the closing credits feature in Pitivi.</p>
+                        </div>
+                        <div class="blog-card-date">Aug 26, 2023</div>
+                    </div>
+                </a>
             </div>
-            <div class="blog-card" onclick="window.location.href='blog2.html'">
+            <!-- <div class="blog-card" onclick="window.location.href='blog2.html'">
                 <div class="blog-card-title">Blog Title 2</div>
                 <div class="blog-card-content">
                     <p>Some brief content here about the blog...</p>
@@ -63,7 +67,7 @@
                     <p>Some brief content here about the blog...</p>
                 </div>
                 <div class="blog-card-date">Nov 18, 2024</div>
-            </div>
+            </div> -->
         </div>
       </section>    
     </main>
@@ -78,6 +82,12 @@
                 $(".nav-links").toggleClass("active");
             });
         });
+
+        // Toggle the 'active' class on the navigation links
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
     </script>
 </body>
 </html>

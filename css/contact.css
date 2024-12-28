@@ -186,7 +186,7 @@ footer {
 
 .submit-button {
     padding: 10px 20px;
-    background-color: #007BFF;
+    background-color: grey;
     color: white;
     border: none;
     border-radius: 4px;
@@ -194,7 +194,7 @@ footer {
 }
 
 .submit-button:hover {
-    background-color: #0056b3;
+    background-color: black;
 }
 
 /* Ensure footer stays at the bottom */
