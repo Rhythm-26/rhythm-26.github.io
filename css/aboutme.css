@@ -1,0 +1,213 @@
+/* General reset and body settings */
+body {
+    margin: 0;
+    font-family: 'Lora', sans-serif; /* Make sure the custom font is applied */
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Aligns content to the left and right */
+    align-items: center;
+    padding: 20px 40px; /* Add spacing from top and sides */
+    background-color: #ffffff; /* Optional: Add a background color */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: none/* Optional: Add subtle shadow for a classy look */
+}
+
+.navbar .logo img{
+    max-width: 150px;  /* Maximum width */
+    height: auto; 
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 20px; /* Space between navigation items */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333; /* Dark color for text */
+    font-size: 16px;
+    font-weight: 600; /* Make the font slightly bold for a classy look */
+    transition: color 0.3s ease; /* Smooth color change on hover */
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #007BFF; /* Change color on hover or if the link is active */
+    font-weight: 700; /* Increase font weight on hover */
+}
+
+.burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.burger .line {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 3px 0;
+}
+
+/* Footer Styling */
+footer {
+    width: 100%;
+    text-align: center; /* Horizontally center the text */
+    padding: 20px;
+    background-color: white;
+    font-size: 14px;
+    color: #555;
+    box-shadow: none; /* Remove any line or shadow */
+    display: flex; /* Enable Flexbox for vertical alignment */
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    min-height: 50px; /* Ensure footer has a minimum height */
+    margin-top: auto; /* Push the footer to the bottom */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .burger {
+        display: flex;
+    }
+}
+
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body settings */
+body {
+    font-family: 'Lora', sans-serif;
+    background-color: #f9f9f9; /* Light background color */
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: none;
+}
+
+/* About Section Styling */
+.about-section {
+    padding: 50px 20px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-container {
+    max-width: 800px;
+    width: 100%;
+}
+
+/* Bio Section */
+.bio h2,
+.education h2,
+.experience h2,
+.resume h2 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.bio p,
+.education p,
+.experience p,
+.resume p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* Resume Button Styling */
+.resume button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.resume button:hover {
+    background-color: #0056b3;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+    color: #777;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content-container {
+        padding: 20px;
+    }
+
+    .bio h2,
+    .education h2,
+    .experience h2,
+    .resume h2 {
+        font-size: 24px;
+    }
+
+    .bio p,
+    .education p,
+    .experience p,
+    .resume p {
+        font-size: 14px;
+    }
+
+    .resume button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}

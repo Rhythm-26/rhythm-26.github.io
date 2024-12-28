@@ -1,0 +1,179 @@
+/* General reset and body settings */
+body {
+    margin: 0;
+    font-family: 'Lora', sans-serif; /* Make sure the custom font is applied */
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Aligns content to the left and right */
+    align-items: center;
+    padding: 20px 40px; /* Add spacing from top and sides */
+    background-color: #ffffff; /* Optional: Add a background color */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: none/* Optional: Add subtle shadow for a classy look */
+}
+
+.navbar .logo img{
+    max-width: 150px;  /* Maximum width */
+    height: auto; 
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 20px; /* Space between navigation items */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333; /* Dark color for text */
+    font-size: 16px;
+    font-weight: 600; /* Make the font slightly bold for a classy look */
+    transition: color 0.3s ease; /* Smooth color change on hover */
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #007BFF; /* Change color on hover or if the link is active */
+    font-weight: 700; /* Increase font weight on hover */
+}
+
+.burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.burger .line {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 3px 0;
+}
+
+/* Footer Styling */
+footer {
+    width: 100%;
+    text-align: center; /* Horizontally center the text */
+    padding: 20px;
+    background-color: white;
+    font-size: 14px;
+    color: #555;
+    box-shadow: none; /* Remove any line or shadow */
+    display: flex; /* Enable Flexbox for vertical alignment */
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    min-height: 50px; /* Ensure footer has a minimum height */
+    margin-top: auto; /* Push the footer to the bottom */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .burger {
+        display: flex;
+    }
+}
+
+/* General Section Styling */
+.publications-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0;
+    background-color: white;
+}
+
+/* Heading Styling for Publications */
+.section-heading {
+    width: 100%;
+    text-align: center; /* Center the heading horizontally */
+    margin-bottom: 40px; /* Space below the heading */
+}
+
+.section-heading h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #333;
+    letter-spacing: 2px;
+}
+
+/* Content Container */
+.content-container {
+    display: flex;
+    justify-content: space-between; /* Ensure space between cards */
+    flex-wrap: wrap; /* Allow cards to wrap onto the next line */
+    gap: 20px; /* Space between cards */
+    width: 90%; /* Set the container width */
+    max-width: 1200px; /* Maximum width */
+    margin: 0 auto; /* Center container horizontally */
+}
+
+/* Publication Cards Styling */
+.card {
+    width: calc(30.333% - 20px); /* Each card takes up 1/3 of the container width minus the gap */
+    background-color: #ffffff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Slight hover effect */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .content-container {
+        flex-direction: column; /* Stack cards vertically on small screens */
+        align-items: center; /* Center the cards */
+    }
+
+    .card {
+        width: 80%; /* Cards will take more width on small screens */
+        margin-bottom: 20px;
+    }
+}

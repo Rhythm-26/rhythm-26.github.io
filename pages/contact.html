@@ -3,58 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Me</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="./assets/icons/RhythmLogo.svg" type="image/svg+xml">
+    <title>Rhythm Narula - Contact</title>
+    <link rel="stylesheet" href="../css/contact.css"> 
+    <style>
+        @font-face {
+            font-family: 'Lora';
+            src: url('../fonts/Lora-VariableFont_wght.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+    </style>
 </head>
 <body>
-    <!-- Header with Navigation -->
-    <header>
-        <div class="navbar">
-            <div class="logo">
-                <img src="your-logo.png" alt="Logo">
-            </div>
-            <div class="nav-buttons">
-                <a href="../index.html">Home</a>
-                <a href="./aboutme.html">About Me</a>
-                <a href="./milestones.html">Milestones</a>
-                <a href="./blog.html">Blog</a>
-                <a href="./contact.html" class="active">Contact</a>
-            </div>
+    <nav class="navbar">
+        <!-- Logo on the rightmost corner -->
+        <div class="logo">
+            <img src="../assets/icons/RhythmLogo.svg" alt="Logo">
         </div>
-    </header>
-
-    <!-- Contact Section -->
-    <main class="contact-container">
-        <h1>Contact Me</h1>
-        <p>If you’d like to connect, feel free to drop me a message or email me directly!</p>
-
-        <!-- Email Section -->
-        <div class="contact-details">
-            <h2>Email</h2>
-            <p><a href="mailto:rhythm.narula@example.com">rhythm.narula@example.com</a></p>
+        
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="./aboutme.html">About Me</a></li>
+            <li><a href="./publications.html">Publications</a></li>
+            <li><a href="./blog.html">Blogs</a></li>
+            <li><a href="./contact.html" class="active">Contact</a></li>
+            <li><a href="#">Resume</a></li>
+        </ul>
+        
+        <div class="burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
         </div>
+    </nav>
 
-        <!-- Contact Form -->
-        <div class="contact-form">
-            <h2>Get in Touch</h2>
-            <form action="mailto:rhythm.narula@example.com" method="post" enctype="text/plain">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" placeholder="Your Name" required>
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="contact-container">
+            <h1>Contact Me</h1>
+            <p>Feel free to reach out to me via email, social media, or use the contact form below.</p>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="Your Email" required>
+            <!-- Contact Sections -->
+            <div class="contact-content">
+                <!-- Contact via Email -->
+                <div class="contact-item">
+                    <h3>Email</h3>
+                    <a href="mailto:rhythm.narula26@gmail.com" class="contact-link">
+                        rhythm.narula26@gmail.com
+                    </a>
+                </div>
 
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                <!-- Contact via Social Media -->
+                <div class="contact-item">
+                    <h3>Social Media</h3>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/rhythm-narula-34b652191/"" target="_blank">
+                            <img src="../assets/icons/linkedin.svg" alt="LinkedIn" class="social-icon">
+                        </a>
+                        <a href="https://www.instagram.com/narula_rhythm/" target="_blank">
+                            <img src="../assets/icons/instagram.svg" alt="Instagram" class="social-icon">
+                        </a>
+                        <a href="https://x.com/rhythmnarula26" target="_blank">
+                            <img src="../assets/icons/twitter.svg" alt="Twitter" class="social-icon">
+                        </a>
+                        <a href="https://x.com/rhythmnarula26" target="_blank">
+                            <img src="../assets/icons/twitter.svg" alt="Twitter" class="social-icon">
+                        </a>
+                        <a href="https://discord.com/channels/rhythm7406" target="_blank">
+                            <img src="../assets/icons/discord.svg" alt="Twitter" class="social-icon">
+                        </a>
+                    </div>
+                </div>
 
-                <button type="submit">Send Message</button>
-            </form>
+                <!-- Contact Form -->
+                <div class="contact-item">
+                    <h3>Send a Message</h3>
+                    <form action="your-server-endpoint" method="POST" class="contact-form">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required>
+
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+
+                        <button type="submit" class="submit-button">Send Message</button>
+                    </form>
+                </div>
+            </div>
         </div>
     </main>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Rhythm Narula. All Rights Reserved.</p>
+        <p>&copy; 2024 Rhythm Narula. All rights reserved.</p>
     </footer>
+    <script>
+        $(document).ready(function () {
+            $(".burger").on("click", function () {
+                $(".nav-links").toggleClass("active");
+            });
+        });
+    </script>
 </body>
 </html>

@@ -3,37 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rhythm Narula - Homepage</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="./assets/icons/RhythmLogo.svg" type="image/svg+xml">
+    <title>Rhythm Narula</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <style>
+        @font-face {
+            font-family: 'Lora';
+            src: url('./fonts/Lora-VariableFont_wght.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <div class="navbar">
-            <div class="logo">
-                <img src="images/logo.png" alt="My Icon">
-            </div>
-            <div class="nav-buttons">
-                <a href="index.html" class="active">Home</a>
-                <a href="./pages/aboutme.html">About Me</a>
-                <a href="./pages/milestones.html">Milestones</a>
-                <a href="./pages/contact.html">Blog</a>
-                <a href="./pages/contact.html">Contact</a>
+    <nav class="navbar">
+        <!-- Logo on the rightmost corner -->
+    <div class="logo">
+        <img src="./assets/icons/RhythmLogo.svg" alt="Logo">
+    </div>
+    
+    <ul class="nav-links">
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="./pages/aboutme.html">About Me</a></li>
+        <li><a href="./pages/publications.html">Publications</a></li>
+        <li><a href="./pages/blog.html">Blogs</a></li>
+        <li><a href="./pages/contact.html">Contact</a></li>
+        <li><a href="#">Resume</a></li>
+    </ul>
+    
+    <div class="burger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+    </nav>
+    <main class="main-content">
+        <div class="left-section">
+            <h1>Hello, I'm Rhythm Narula</h1>
+            <p>Currently a Software Engineer at Microsoft with a passion for distributed systems and database designing.</p>
+        </div>
+        <div class="right-section">
+            <img src="./assets/images/profile.jpeg" alt="Rhythm Narula" class="profile-pic">
+            <div class="social-bar">
+                <a href="mailto:rhythm.narula26@gmail.com" target="_blank">
+                    <img src="./assets/icons/gmail.svg" alt="Gmail" class="social-icon">
+                </a>                
+                <a href="https://www.linkedin.com/in/rhythm-narula-34b652191/" target="_blank">
+                    <img src="./assets/icons/linkedin.svg" alt="LinkedIn" class="social-icon">
+                </a>
+                <!-- <a href="https://twitter.com/your-handle" target="_blank">
+                    <img src="./assets/icons/twitter.svg" alt="Twitter" class="social-icon">
+                </a> -->
+                <!-- <a href="https://facebook.com/your-handle" target="_blank">
+                    <img src="./assets/icons/medium.svg" alt="Medium" class="social-icon">
+                </a> -->
+                <a href="https://github.com/Rhythm-26" target="_blank">
+                    <img src="./assets/icons/github.svg" alt="GitHub" class="social-icon">
+                </a>
+                <a href="https://www.instagram.com/narula_rhythm/" target="_blank">
+                    <img src="./assets/icons/instagram.svg" alt="Instagram" class="social-icon">
+                </a>
             </div>
         </div>
-    </header>
-    <main>
-        <section class="hero">
-            <div class="hero-text">
-                <h1>I'm Rhythm Narula</h1>
-                <p>Currently, a Software Engineer at Microsoft.</p>
-            </div>
-            <div class="hero-image">
-                <img src="assets/images/profile.jpeg" alt="Rhythm Narula">
-            </div>
-        </section>
     </main>
     <footer>
         <p>&copy; 2024 Rhythm Narula. All rights reserved.</p>
-    </footer>
+    </footer>    
+    <script>
+        $(document).ready(function () {
+            $(".burger").on("click", function () {
+                $(".nav-links").toggleClass("active");
+            });
+        });
+    </script>
 </body>
 </html>
