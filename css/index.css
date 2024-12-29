@@ -7,21 +7,34 @@ body {
     height: 100vh;
 }
 
+/* Navbar Styling */
 .navbar {
     display: flex;
-    justify-content: space-between; /* Aligns content to the left and right */
-    align-items: center;
-    padding: 20px 40px; /* Add spacing from top and sides */
-    background-color: #ffffff; /* Optional: Add a background color */
+    justify-content: space-between; /* Align items to the left and right */
+    align-items: center; /* Center items vertically */
+    padding: 0 40px; /* Adjust horizontal padding as needed */
+    background-color: #ffffff;
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: none/* Optional: Add subtle shadow for a classy look */
+    height: 80px; /* Set a fixed height for the navbar */
+    box-shadow: none;
 }
 
-.navbar .logo img{
-    max-width: 150px;  /* Maximum width */
-    height: auto; 
+/* Logo Container Styling */
+.logo {
+    display: flex;
+    align-items: center; /* Center the logo vertically */
+    height: 100%; /* Match the navbar's height */
+    background-color: transparent; 
+}
+
+/* SVG Logo Styling */
+.logo img {
+    height: 30%; /* Scale logo relative to the navbar height */
+    width: auto; /* Maintain aspect ratio */
+    max-height: 100%; /* Prevent it from exceeding the container height */
+    background-color: transparent;
 }
 
 .nav-links {
@@ -56,8 +69,8 @@ body {
 }
 
 .burger .line {
-    width: 25px;
-    height: 3px;
+    width: 100%;
+    height: 4px;
     background-color: black;
     margin: 3px 0;
 }
@@ -172,6 +185,18 @@ footer {
     margin-top: auto; /* Push the footer to the bottom */
 }
 
+/* Styling for specific links with the .styled-links class */
+.styled-link {
+    text-decoration: none; /* Remove underline */
+    color: #007BFF; /* Change color on hover */
+    font-weight: 500; /* Normal font weight */
+    transition: color 0.2s ease; /* Smooth color transition on hover */
+}
+
+.styled-link:hover {
+    color: #333; /* Change color on hover */
+}
+
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
     .nav-links {
@@ -186,11 +211,13 @@ footer {
 
     .burger {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         flex-direction: column;
         width: 40px;
         height: 40px;
+        cursor: pointer;
+        z-index: 1001;
     }
 
     .main-content {

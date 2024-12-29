@@ -7,21 +7,34 @@ body {
     height: 100vh;
 }
 
+/* Navbar Styling */
 .navbar {
     display: flex;
-    justify-content: space-between; /* Aligns content to the left and right */
-    align-items: center;
-    padding: 20px 40px; /* Add spacing from top and sides */
-    background-color: #ffffff; /* Optional: Add a background color */
+    justify-content: space-between; /* Align items to the left and right */
+    align-items: center; /* Center items vertically */
+    padding: 0 40px; /* Adjust horizontal padding as needed */
+    background-color: #ffffff;
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: none/* Optional: Add subtle shadow for a classy look */
+    height: 80px; /* Set a fixed height for the navbar */
+    box-shadow: none;
 }
 
-.navbar .logo img{
-    max-width: 150px;  /* Maximum width */
-    height: auto; 
+/* Logo Container Styling */
+.logo {
+    display: flex;
+    align-items: center; /* Center the logo vertically */
+    height: 100%; /* Match the navbar's height */
+    background-color: transparent; 
+}
+
+/* SVG Logo Styling */
+.logo img {
+    height: 30%; /* Scale logo relative to the navbar height */
+    width: auto; /* Maintain aspect ratio */
+    max-height: 100%; /* Prevent it from exceeding the container height */
+    background-color: transparent;
 }
 
 .nav-links {
@@ -110,20 +123,7 @@ footer {
 /* Body settings */
 body {
     font-family: 'Lora', sans-serif;
-    background-color: #f9f9f9; /* Light background color */
-}
-
-/* Navbar Styling */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 40px;
-    background-color: #fff;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: none;
+    background-color: white; /* Light background color */
 }
 
 /* About Section Styling */
@@ -143,8 +143,7 @@ body {
 /* Bio Section */
 .bio h2,
 .education h2,
-.experience h2,
-.resume h2 {
+.experience h2 {
     font-size: 28px;
     font-weight: 600;
     color: #333;
@@ -153,28 +152,11 @@ body {
 
 .bio p,
 .education p,
-.experience p,
-.resume p {
+.experience p {
     font-size: 16px;
     color: #555;
     line-height: 1.6;
     margin-bottom: 25px;
-}
-
-/* Resume Button Styling */
-.resume button {
-    padding: 10px 20px;
-    background-color: gray;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s;
-}
-
-.resume button:hover {
-    background-color: black;
 }
 
 /* Footer Styling */
@@ -194,20 +176,13 @@ footer {
 
     .bio h2,
     .education h2,
-    .experience h2,
-    .resume h2 {
+    .experience h2 {
         font-size: 24px;
     }
 
     .bio p,
     .education p,
-    .experience p,
-    .resume p {
-        font-size: 14px;
-    }
-
-    .resume button {
-        padding: 8px 16px;
+    .experience p{
         font-size: 14px;
     }
 }

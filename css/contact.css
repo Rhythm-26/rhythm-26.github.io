@@ -12,20 +12,31 @@ body {
 /* Navbar Styling */
 .navbar {
     display: flex;
-    justify-content: space-between; /* Aligns content to the left and right */
-    align-items: center;
-    padding: 20px 40px; /* Add spacing from top and sides */
-    background-color: #ffffff; /* Optional: Add a background color */
+    justify-content: space-between; /* Align items to the left and right */
+    align-items: center; /* Center items vertically */
+    padding: 0 40px; /* Adjust horizontal padding as needed */
+    background-color: #ffffff;
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: none; /* Optional: Add subtle shadow for a classy look */
+    height: 80px; /* Set a fixed height for the navbar */
+    box-shadow: none;
 }
 
-/* Logo Styling */
-.navbar .logo img {
-    max-width: 150px; /* Maximum width */
-    height: auto;
+/* Logo Container Styling */
+.logo {
+    display: flex;
+    align-items: center; /* Center the logo vertically */
+    height: 100%; /* Match the navbar's height */
+    background-color: transparent; 
+}
+
+/* SVG Logo Styling */
+.logo img {
+    height: 30%; /* Scale logo relative to the navbar height */
+    width: auto; /* Maintain aspect ratio */
+    max-height: 100%; /* Prevent it from exceeding the container height */
+    background-color: transparent;
 }
 
 /* Navigation Links */
